@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { Reveal } from "@/components/motion-primitives";
 import { GoldButton, Section } from "@/components/ui-kit";
 import { ContactCta } from "@/components/home/HomeSections";
-import { BLOG_POSTS, getPost } from "@/lib/blog-data";
+import { BLOG_POSTS, getPost, type BlogPost } from "@/lib/blog-data";
 import { BLOG_IMAGES, formatDate } from "@/lib/blog-images";
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -63,7 +63,7 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function BlogPostPage() {
-  const { post } = Route.useLoaderData();
+  const { post } = Route.useLoaderData() as { post: BlogPost };
   const related = post.related
     .map((slug) => BLOG_POSTS.find((p) => p.slug === slug))
     .filter(Boolean)
