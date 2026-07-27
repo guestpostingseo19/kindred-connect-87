@@ -20,7 +20,7 @@ export const IMAGES = {
   workspace,
 };
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: TITLE },
