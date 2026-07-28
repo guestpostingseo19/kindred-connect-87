@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS, SITE } from "@/lib/site-data";
 import { Magnetic } from "./motion-primitives";
+import portraitAsset from "@/assets/haris-portrait.jpg.asset.json";
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,9 +35,13 @@ export function SiteNav() {
           )}
         >
           <Link to="/" className="flex min-w-0 items-center gap-3">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-primary font-display text-sm font-bold text-primary-foreground">
-              HM
-            </span>
+            <img
+              src={portraitAsset.url}
+              alt="Haris Malik"
+              width={36}
+              height={36}
+              className="h-9 w-9 shrink-0 rounded-xl object-cover ring-1 ring-primary/50"
+            />
             <span className="min-w-0">
               <span className="block truncate font-display text-sm font-semibold tracking-tight">
                 {SITE.name}
