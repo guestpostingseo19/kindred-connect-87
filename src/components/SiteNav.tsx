@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS, SITE } from "@/lib/site-data";
 import { Magnetic } from "./motion-primitives";
+import portraitAsset from "@/assets/haris-portrait.jpg.asset.json";
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
