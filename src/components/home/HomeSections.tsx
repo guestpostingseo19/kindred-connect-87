@@ -28,7 +28,7 @@ import {
 import { BLOG_POSTS } from "@/lib/blog-data";
 import smartHome from "@/assets/smart-home.jpg";
 import growthChart from "@/assets/growth-chart.jpg";
-import portrait from "@/assets/portrait.jpg";
+import portraitAsset from "@/assets/haris-portrait.jpg.asset.json";
 
 export function WhyChooseMe() {
   return (
@@ -66,7 +66,7 @@ export function AboutPreview() {
           <Parallax amount={30}>
             <div className="relative overflow-hidden rounded-[2rem] border border-border">
               <img
-                src={portrait}
+                src={portraitAsset.url}
                 alt="Haris Malik, off-page SEO specialist for home automation brands"
                 width={912}
                 height={1024}

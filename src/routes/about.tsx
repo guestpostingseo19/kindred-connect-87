@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Award, Compass, Quote } from "lucide-react";
-import portrait from "@/assets/portrait.jpg";
+import portraitAsset from "@/assets/haris-portrait.jpg.asset.json";
 import workspace from "@/assets/workspace.jpg";
 import { Parallax, Reveal } from "@/components/motion-primitives";
 import { PageHero, Section, SectionHeading } from "@/components/ui-kit";
@@ -43,7 +43,7 @@ function AboutPage() {
             <Parallax amount={26}>
               <div className="relative overflow-hidden rounded-[2rem] border border-border">
                 <img
-                  src={portrait}
+                  src={portraitAsset.url}
                   alt="Professional portrait of Haris Malik"
                   width={912}
                   height={1024}
